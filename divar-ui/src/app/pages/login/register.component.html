@@ -1,0 +1,31 @@
+<div class="panel" style="height: auto;">
+  <div class="panel-body" style="height: 100%;">
+   
+      <form [formGroup]="theForm" style="padding: 10px" novalidate autocomplete="off">        
+          <div class="panel-title"> ورود</div>
+              
+                <div class="row">
+                  <div class="col-12">
+                    <tamin-field-label formControlName="username">نام کاربری  </tamin-field-label>
+                    <tamin-field-validator formControlName="username"></tamin-field-validator>
+                    <tamin-field-text formControlName="username">
+                    </tamin-field-text>
+                  </div>
+                  <div class="col-12">
+                    <tamin-field-label formControlName="password"> کلمه عبور </tamin-field-label>
+                    <tamin-field-validator formControlName="password"></tamin-field-validator>
+                    <tamin-field-password formControlName="password"></tamin-field-password>
+                  </div>
+                  <div class="col-12">
+                    <button class="button normal" style="float: left" (click)="login()">ورود </button>
+                    <button class="button white" style="float: left" (click)="redirectTo('')">انصراف</button>
+                  </div>
+                </div>
+        
+            
+            
+   
+      </form>
+
+</div>
+</div>

@@ -1,0 +1,27 @@
+<div>
+  <ng-container *ngIf="!securityService.hasToken()">
+    <button class="user-container" (click)="securityService.redirectToLogin()" [attr.style.color]="color">
+      <i class="icon-log-in-round" style="margin-bottom: -10px;" [style.color]="color"></i>
+      <span [style.color]="color" style="font-size: 14px">ورود به سیستم</span>&nbsp;
+    </button>
+  </ng-container>
+  <ng-container *ngIf="securityService.hasToken()">
+    <button #userContainer class="user-container" (click)="togglePopup()" (focusout)="togglePopup()"
+            [style.color]="color">
+      <span [style.color]="color">{{userName}}</span>&nbsp;
+      <i class="icon-keyboard-arrow-down-round" style="cursor: pointer;margin-bottom: -10px;"
+         [attr.style.color]="color"></i>
+    </button>
+    <div #menu class="menu" style="visibility: hidden">
+      <div class="menu-item" (click)="onProfileClick($event)" style="border-bottom: solid 1px #d6d6d6">
+        <i class="icon-person-outline-outline"></i>&nbsp;
+        <span>مشخصات کاربری</span>
+      </div>
+      <div class="menu-item" (click)="onLogoutClick($event)">
+        <i class="icon-log-out-round"></i>&nbsp;
+        <span>خروج</span>
+      </div>
+    </div>
+  </ng-container>
+</div>
+

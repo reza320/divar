@@ -1,0 +1,15 @@
+{
+  "status": 500,
+  "family": "",
+  "reason": "",
+  "data": {
+    "caption": "root",
+    "disable": false,
+    "url": "",
+    "url-type": "none",
+    "tags": [],
+    "smallIcon": "",
+    "largeIcon": "",
+    "items": []
+  }
+}

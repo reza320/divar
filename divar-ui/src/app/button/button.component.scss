@@ -1,0 +1,16 @@
+@import "src/assets/css/variables";
+
+.app-button {
+  background-color: #4bc878;
+  padding: 9px 22px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.app-button i {
+  color: white;
+}
+
+.app-button:hover {
+  background-color: #3acc6c;
+}

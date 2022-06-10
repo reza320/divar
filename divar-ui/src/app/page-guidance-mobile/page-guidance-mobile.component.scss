@@ -1,0 +1,17 @@
+.container {
+  background-color: #f0f0f0;
+  margin: 20px;
+  padding: 30px;
+  border: solid 1px #f0f0f0;
+  border-radius: 3px;
+}
+
+h2 {
+  color: black !important;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+ol > li::marker {
+  font-weight: bold;
+}

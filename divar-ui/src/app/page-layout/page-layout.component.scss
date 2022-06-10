@@ -1,0 +1,89 @@
+@import "src/assets/css/variables";
+
+.form-section-desktop {
+  position: absolute;
+  top: 0;
+  left: 30%;
+  width: 70%;
+  height: 100%;
+  overflow: auto;
+}
+
+.form-section-mobile {
+  width: 100%;
+}
+
+.help-section-desktop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30%;
+  height: 100%;
+  padding: 30px;
+  background-image: url(/assets/images/bg.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: auto;
+}
+
+.help-section-mobile {
+}
+
+
+.row {
+  min-height: inherit;
+  overflow: hidden
+}
+
+.col-12 {
+  min-height: inherit;
+  overflow: hidden
+}
+
+
+p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+h2 {
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.col-6, .col-12 {
+  padding: 10px;
+}
+
+table.summary, td {
+  border: 1px solid #cacaca;
+  padding: 5px;
+}
+
+table.summary {
+  width: calc(100% - 20px);
+  border-collapse: collapse;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.page-component-title {
+  margin-top: $page-title-margin-top;
+  color: $page-title-color;
+  text-align: center;
+}
+
+.help-section-desktop {
+  width: 30%;
+  padding: 30px;
+  background-image: url(/assets/images/bg.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: table-cell;
+}
+

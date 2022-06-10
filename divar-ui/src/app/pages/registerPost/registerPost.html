@@ -1,0 +1,34 @@
+<div *ngIf='!showCategory' class="submit-post">
+    <div class="kt-container">
+        <div class="kt-row">
+            <div class="submit-post__grid kt-col-md-12 kt-col-lg-6 kt-offset-lg-3">
+                <div>
+                    <div class="kt-section-title category-selector__title">
+                        <div>
+                            <div class="kt-section-title__title-block"><span class="kt-section-title__title"> ثبت آگهی
+                                </span></div>
+                            <p class="kt-section-title__subtitle">انتخاب دسته‌بندی</p>
+                        </div>
+                    </div>
+                    <div class="category-selector__item" *ngFor="let category of categories;let index = index">
+                        <div (click)='getSubCategories(category.id,category.code)' class="kt-selector-row">
+                            <div class="kt-base-row kt-base-row--large kt-base-row--has-icon">
+                                <div class="kt-base-row__start"><i
+                                        class="kt-icon kt-icon-real-estate kt-icon--lg kt-base-row__icon"></i>
+                                    <p class="kt-selector-row__title">{{category.title}}</p>
+                                </div>
+                                <div class="kt-base-row__end"><i
+                                        class="kt-icon kt-icon-keyboard-arrow-left kt-icon--lg kt-base-row__arrow"></i>
+                                </div>
+                            </div>
+                            <hr class="kt-divider">
+                        </div>
+                    </div>
+                </div>
+     
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-register-post-category *ngIf='showCategory' [category]=this.category></app-register-post-category>

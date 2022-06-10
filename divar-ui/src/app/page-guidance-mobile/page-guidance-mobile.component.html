@@ -1,0 +1,9 @@
+<div class="container">
+  <h2 style="text-align: right;color:white;margin-bottom: 1.5em;">{{title}}</h2>
+  <ol>
+    <li *ngFor="let item of items" style="text-align: justify;margin-bottom: 20px;margin-left: 10px;line-height: 2">
+      <ng-container *ngTemplateOutlet="item.bodyContent">
+      </ng-container>
+    </li>
+  </ol>
+</div>

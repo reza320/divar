@@ -1,0 +1,16 @@
+<div class="header">
+  <div class="row">
+    <div class="col-3 col-s-3 logo">
+      <a href="javascript:void(0);" class="logo-background"></a>
+    </div>
+    <div class="col-9 col-s-9">
+      <div class="login-area" style="margin-top: 10px;">
+        <div (click)='login()' class="login-button">
+          <i *ngIf='!userName || userName.length===0' class="icon-login"></i>
+          <a>{{ userName ? userName :'ورود به سامانه'}}</a>
+          <a style="padding-right: 15px;" *ngIf='userName && userName.length>0' (click)='logout()'> خروج</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<div class="help-section-desktop" *ngIf="renderMode === 'desktop'">
+  <ng-content select="app-page-guidance"></ng-content>
+</div>
+<div [ngClass]="{'form-section-desktop' : renderMode === 'desktop', 'form-section-mobile': renderMode === 'mobile'}" class="scrollbar">
+  <app-user style="position: absolute; top: 0;left: 0"></app-user>
+  <img src="/assets/images/logo.svg" alt="" style="margin-top: 20px;margin-right: 20px">
+    <h2 class="page-component-title">{{title}}</h2>
+    <ng-content select="app-page-body"></ng-content>
+</div>

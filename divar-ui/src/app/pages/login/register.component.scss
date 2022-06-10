@@ -1,0 +1,33 @@
+h4 {
+  padding-right: 32px;
+  padding-bottom: 20px;
+}
+
+
+.imageDiv {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 295px;
+  overflow: auto;
+  border: 5px solid cadetblue;
+}
+
+.uploadBtn {
+  margin-bottom: 20px;
+}
+
+.tamin-form-control-input {
+  direction: rtl !important;
+}
+
+.tamin-form-control-mask {
+  direction: ltr !important;
+}
+
+.panel-title {
+  text-align: center;
+  margin-bottom: 26px;
+}

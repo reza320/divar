@@ -1,0 +1,38 @@
+ol {
+  counter-reset: my-awesome-counter;
+  list-style: none;
+  padding-right: 40px;
+}
+
+ol li {
+  margin: 0 0.5rem 10px 0;
+  counter-increment: my-awesome-counter;
+  position: relative;
+  color: white;
+}
+
+ol li::before {
+  content: counter(my-awesome-counter);
+  color: white;
+  position: absolute;
+  border: solid 1px white;
+  --size: 30px;
+  right: calc(-1 * var(--size) - 10px);
+  line-height: var(--size);
+  width: var(--size);
+  height: var(--size);
+  top: 0;
+  background: transparent;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.col-6, .col-12 {
+  padding: 10px;
+}
+
+h2 {
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+}

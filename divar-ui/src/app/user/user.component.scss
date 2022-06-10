@@ -1,0 +1,109 @@
+button {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+button {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  -webkit-appearance: button;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+button:active {
+  background-color: unset !important;
+  transition: unset !important;
+}
+
+button:disabled {
+  background-color: unset !important;
+  color: unset !important;
+  cursor: unset !important;
+}
+
+.user-container {
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px;
+  margin: 10px;
+  background-color: transparent;
+  border: solid 1px transparent;
+  outline: none;
+}
+
+.user-container:hover {
+  background-color: transparent;
+}
+
+.menu {
+  -webkit-box-shadow: 0 0 10px 2px #ccc;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  background: white;
+  color: white;
+  //font-weight: bold;
+  padding: 10px 0;
+  margin-top: -10px !important;
+  margin-left: 5px;
+
+  font-size: 13px;
+  border-radius: 4px;
+}
+
+.menu-item {
+  color: black;
+  padding: 7px 15px;
+  cursor: pointer;
+
+}
+
+.menu-item:hover {
+  //color: white;
+  background-color: #e3e3e3;
+
+}
+
+.arrow,
+.arrow::before {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  z-index: -1;
+}
+
+.arrow::before {
+  content: '';
+  transform: rotate(45deg);
+  background: white;
+}
+
+.menu[data-popper-placement^='top'] > .arrow {
+  bottom: -4px;
+}
+
+.menu[data-popper-placement^='bottom'] > .arrow {
+  top: -4px;
+}
+
+.menu[data-popper-placement^='left'] > .arrow {
+  right: -4px;
+}
+
+.menu[data-popper-placement^='right'] > .arrow {
+  left: -4px;
+}
