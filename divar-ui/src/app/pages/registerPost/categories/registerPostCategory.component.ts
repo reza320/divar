@@ -2,6 +2,7 @@ import { Component, Injector, Input, ViewChild, ViewEncapsulation } from "@angul
 import { DomSanitizer } from "@angular/platform-browser";
 import { Urls } from "src/settings/urls";
 import { TaminPageBaseComponent } from "tamin-framework";
+import {} from 'googlemaps';
 
 @Component({
   selector: 'app-register-post-category',
@@ -14,13 +15,15 @@ export class RegisterPostCategory extends TaminPageBaseComponent{
 
 
 @ViewChild('attachments') attachment: any;
+@ViewChild('map') mapElement: any;
+
 
 @Input() category;
 overlay: string;
   listOfFiles: any=[];
   fileList: any=[];
 
-
+  map: google.maps.Map;
 
   constructor(injector: Injector,private sanitizer: DomSanitizer) {
     super(injector);
@@ -32,7 +35,14 @@ overlay: string;
   }
 
 
-
+  initializePage() {
+    const mapProperties = {
+      center: new google.maps.LatLng(35.2271, -80.8431),
+      zoom: 15,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+ };
+ this.map = new google.maps.Map(this.mapElement.nativeElement,    mapProperties);
+  }
 
 
   removeSelectedFile(index) {
@@ -67,7 +77,7 @@ overlay: string;
           'src': this.sanitizer.bypassSecurityTrustUrl(URL.createObjectURL(selectedFile))
         });
         }
-        
+
       else {
         this.showErrorMessageBox('خطا', 'تنها تصاویر با فرمت jpg،jpeg و png مجاز هستند')
         return false;
@@ -81,4 +91,3 @@ overlay: string;
 
 }
 
- 

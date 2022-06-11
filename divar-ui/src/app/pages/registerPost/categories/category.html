@@ -1,420 +1,369 @@
 <div class="kt-container">
-    <div class="kt-row">
-        <div class="submit-post__grid kt-col-md-12 kt-col-lg-6 kt-offset-lg-3">
-            <div>
-                <h1 class="submit-post__title"> ثبت آگهی </h1>
-                <div class="form-category-title form-category-title--with-action"
-                    data-gtm-vis-first-on-screen-7331304_61="121019" data-gtm-vis-recent-on-screen-7331304_61="162495"
-                    data-gtm-vis-total-visible-time-7331304_61="100" data-gtm-vis-has-fired-7331304_61="1">
-                    <div class="form-category-title__name">{{category.title}}</div><button
-                        class="kt-button kt-button--primary kt-button--inlined form-category-title__button"
-                        type="button" tabindex="0"><span class="kt-text-truncate no-pointer-event">تغییر
-                            دسته‌بندی</span></button>
-                </div>
-                <div class="submit-post__form-wrapper">
-                    <div class="json-schema-form-dim dim">
-                        <div class="json-schema-form">
-                            <form class="json-schema-form__form" novalidate="">
-                                <div class="field-template">
-                                    <div class="field">
-                                        <div class="field-template__children">
-                                            <fieldset id="root">
-                                                <legend id="root__title">صنعتی، کشاورزی و تجاری</legend>
-                                                <div class="field-template">
-                                                    <div class="field">
-                                                        <div class="field-template__children">
-                                                            <div class="submit-location-selector">
-                                                                <div class="text-field">شهر</div>
-                                                                <div aria-haspopup="true" aria-expanded="false"
-                                                                    class="kt-dropdown-menu kt-new-select-drop-down">
-                                                                    <button type="button"
-                                                                        class="kt-new-select-field kt-new-select-field--normal"
-                                                                        tabindex="0"><span type="button"
-                                                                            class="kt-clear-field kt-clear-field--lg kt-clear-field--dark kt-new-select-clear"
-                                                                            role="button" tabindex="-1">
-                                                                            <div class="kt-clear-field__button"><i
-                                                                                    class="kt-icon kt-icon-remove kt-icon--lg"></i>
-                                                                            </div>
-                                                                        </span>
-                                                                        <p
-                                                                            class="kt-new-select-label kt-new-select-label--has-label">
-                                                                            شیراز</p><i
-                                                                            class="kt-icon kt-icon-keyboard-arrow-down-o kt-icon--lg kt-new-select-arrow"></i>
-                                                                    </button></div>
-                                                                <div class="field-template">
-                                                                    <div class="text-field">محدودهٔ آگهی</div>
-                                                                    <div aria-haspopup="true" aria-expanded="false"
-                                                                        class="kt-dropdown-menu kt-new-select-drop-down">
-                                                                        <button type="button"
-                                                                            class="kt-new-select-field kt-new-select-field--normal"
-                                                                            tabindex="0"><span type="button"
-                                                                                class="kt-clear-field kt-clear-field--lg kt-clear-field--dark kt-new-select-clear"
-                                                                                role="button" tabindex="-1">
-                                                                                <div class="kt-clear-field__button"><i
-                                                                                        class="kt-icon kt-icon-remove kt-icon--lg"></i>
-                                                                                </div>
-                                                                            </span>
-                                                                            <p class="kt-new-select-label">انتخاب
-                                                                                محله...</p><i
-                                                                                class="kt-icon kt-icon-keyboard-arrow-down-o kt-icon--lg kt-new-select-arrow"></i>
-                                                                        </button></div>
-                                                                </div>
-                                                                <div #map style="width:100%;height:400px"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="field-template">
-                                                    <div class="field">
-                                                        <div class="field-template__children">
-                                                            <div class="image-uploader">
-                                                                <div class="text-field text-field--with-description">عکس
-                                                                    آگهی</div>
-                                                                <div class="ui message messages messages--help">عکس‌هایی
-                                                                    از فضای داخل و بیرون ملک اضافه کنید. آگهی‌های دارای
-                                                                    عکس تا «۳ برابر» بیشتر توسط کاربران دیده می‌شوند.
-                                                                </div>
-                                                                <div class="image-uploader__zone">
-    <div class="kt-image-drop-zone" (click)="fileInput.click()" tabindex="0"                                                                role="button">
-    <input (change)="onFileChanged($event)" #fileInput  #attachments class="kt-image-drop-zone__file-input" accept="image/jpg,image/jpeg,image/png" multiple="true"  type="file" style="display: none;"autocomplete="off" tabindex="-1">
-    <img src="data:image/ svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'%3e%3ctitle%3eimage-uploader-border%3c/title%3e%3cpath d='M5.5%2c0h-1A4.45%2c4.45%2c0%2c0%2c0%2c0%2c4.45v1A.5.5%2c0%2c0%2c0%2c.5%2c6%2c.5.5%2c0%2c0%2c0%2c1%2c5.5v-1A3.46%2c3.46%2c0%2c0%2c1%2c4.46%2c1h1A.5.5%2c0%2c0%2c0%2c6%2c.5.5.5%2c0%2c0%2c0%2c5.5%2c0Z'/%3e%3cpath d='M63.25%2c0h-2a.5.5%2c0%2c0%2c0-.5.5.5.5%2c0%2c0%2c0%2c.5.5h2a.5.5%2c0%2c0%2c0%2c0-1Z'/%3e%3cpath d='M57.44%2c0H55.49a.5.5%2c0%2c0%2c0-.5.5.5.5%2c0%2c0%2c0%2c.5.5h1.95a.5.5%2c0%2c0%2c0%2c.5-.5A.5.5%2c0%2c0%2c0%2c57.44%2c0Z'/%3e%3cpath d='M51.64%2c0h-2a.5.5%2c0%2c0%2c0%2c0%2c1h2a.5.5%2c0%2c0%2c0%2c.5-.5A.5.5%2c0%2c0%2c0%2c51.64%2c0Z'/%3e%3cpath d='M86.46%2c0h-2a.5.5%2c0%2c0%2c0%2c0%2c1h2a.5.5%2c0%2c0%2c0%2c0-1Z'/%3e%3cpath d='M74.85%2c0H72.9a.5.5%2c0%2c0%2c0-.5.5.5.5%2c0%2c0%2c0%2c.5.5h1.95a.5.5%2c0%2c0%2c0%2c.5-.5A.5.5%2c0%2c0%2c0%2c74.85%2c0Z'/%3e%3cpath d='M80.65%2c0h-2a.5.5%2c0%2c0%2c0-.5.5.5.5%2c0%2c0%2c0%2c.5.5h2a.5.5%2c0%2c0%2c0%2c.5-.5A.5.5%2c0%2c0%2c0%2c80.65%2c0Z'/%3e%3cpath d='M28.43%2c0h-2a.5.5%2c0%2c0%2c0-.5.5.5.5%2c0%2c0%2c0%2c.5.5h2a.5.5%2c0%2c0%2c0%2c0-1Z'/%3e%3cpath d='M22.62%2c0H20.67a.5.5%2c0%2c0%2c0-.5.5.5.5%2c0%2c0%2c0%2c.5.5h1.95a.5.5%2c0%2c0%2c0%2c.5-.5A.5.5%2c0%2c0%2c0%2c22.62%2c0Z'/%3e%3cpath d='M16.82%2c0h-2a.5.5%2c0%2c0%2c0%2c0%2c1h2a.5.5%2c0%2c0%2c0%2c.5-.5A.5.5%2c0%2c0%2c0%2c16.82%2c0Z'/%3e%3cpath d='M11%2c0h-2a.5.5%2c0%2c0%2c0%2c0%2c1h2a.5.5%2c0%2c0%2c0%2c0-1Z'/%3e%3cpath d='M40%2c0h-2a.5.5%2c0%2c0%2c0-.5.5.5.5%2c0%2c0%2c0%2c.5.5h2a.5.5%2c0%2c0%2c0%2c.5-.5A.5.5%2c0%2c0%2c0%2c40%2c0Z'/%3e%3cpath d='M45.84%2c0h-2a.5.5%2c0%2c0%2c0-.5.5.5.5%2c0%2c0%2c0%2c.5.5h2a.5.5%2c0%2c0%2c0%2c0-1Z'/%3e%3cpath d='M34.23%2c0h-2a.5.5%2c0%2c0%2c0%2c0%2c1h2a.5.5%2c0%2c0%2c0%2c.5-.5A.5.5%2c0%2c0%2c0%2c34.23%2c0Z'/%3e%3cpath d='M69.05%2c0h-2a.5.5%2c0%2c0%2c0%2c0%2c1h2a.5.5%2c0%2c0%2c0%2c0-1Z'/%3e%3cpath d='M5.5%2c95h-1A3.46%2c3.46%2c0%2c0%2c1%2c1%2c91.54v-1A.5.5%2c0%2c0%2c0%2c.5%2c90a.5.5%2c0%2c0%2c0-.5.5v1A4.45%2c4.45%2c0%2c0%2c0%2c4.45%2c96h1a.5.5%2c0%2c0%2c0%2c0-1Z'/%3e%3cpath d='M34.23%2c95h-2a.5.5%2c0%2c0%2c0%2c0%2c1h2a.5.5%2c0%2c0%2c0%2c0-1Z'/%3e%3cpath d='M69.05%2c95h-2a.5.5%2c0%2c0%2c0%2c0%2c1h2a.5.5%2c0%2c1%2c0%2c0-1Z'/%3e%3cpath d='M28.43%2c95h-2a.5.5%2c0%2c0%2c0%2c0%2c1h2a.5.5%2c0%2c1%2c0%2c0-1Z'/%3e%3cpath d='M63.25%2c95h-2a.5.5%2c0%2c1%2c0%2c0%2c1h2a.5.5%2c0%2c0%2c0%2c0-1Z'/%3e%3cpath d='M45.84%2c95h-2a.5.5%2c0%2c1%2c0%2c0%2c1h2a.5.5%2c0%2c0%2c0%2c0-1Z'/%3e%3cpath d='M57.44%2c95H55.49a.5.5%2c0%2c0%2c0%2c0%2c1h1.95a.5.5%2c0%2c0%2c0%2c0-1Z'/%3e%3cpath d='M40%2c95h-2a.5.5%2c0%2c1%2c0%2c0%2c1h2a.5.5%2c0%2c0%2c0%2c0-1Z'/%3e%3cpath d='M51.64%2c95h-2a.5.5%2c0%2c0%2c0%2c0%2c1h2a.5.5%2c0%2c0%2c0%2c0-1Z'/%3e%3cpath d='M22.62%2c95H20.67a.5.5%2c0%2c0%2c0%2c0%2c1h1.95a.5.5%2c0%2c1%2c0%2c0-1Z'/%3e%3cpath d='M80.65%2c95h-2a.5.5%2c0%2c1%2c0%2c0%2c1h2a.5.5%2c0%2c0%2c0%2c0-1Z'/%3e%3cpath d='M86.46%2c95h-2a.5.5%2c0%2c0%2c0%2c0%2c1h2a.5.5%2c0%2c0%2c0%2c0-1Z'/%3e%3cpath d='M11%2c95h-2a.5.5%2c0%2c0%2c0%2c0%2c1h2a.5.5%2c0%2c0%2c0%2c0-1Z'/%3e%3cpath d='M16.82%2c95h-2a.5.5%2c0%2c0%2c0%2c0%2c1h2a.5.5%2c0%2c0%2c0%2c0-1Z'/%3e%3cpath d='M74.85%2c95H72.9a.5.5%2c0%2c0%2c0%2c0%2c1h1.95a.5.5%2c0%2c0%2c0%2c0-1Z'/%3e%3cpath d='M96%2c4.45A4.45%2c4.45%2c0%2c0%2c0%2c91.55%2c0h-1a.5.5%2c0%2c0%2c0-.5.5.5.5%2c0%2c0%2c0%2c.5.5h1A3.46%2c3.46%2c0%2c0%2c1%2c95%2c4.46v1a.5.5%2c0%2c0%2c0%2c1%2c0Z'/%3e%3cpath d='M95.5%2c73.1a.5.5%2c0%2c0%2c0-.5.5v2a.5.5%2c0%2c1%2c0%2c1%2c0v-2A.5.5%2c0%2c0%2c0%2c95.5%2c73.1Z'/%3e%3cpath d='M95.5%2c9.26a.5.5%2c0%2c0%2c0-.5.5v2a.5.5%2c0%2c0%2c0%2c1%2c0v-2A.5.5%2c0%2c0%2c0%2c95.5%2c9.26Z'/%3e%3cpath d='M95.5%2c15.07a.5.5%2c0%2c0%2c0-.5.5v1.95a.5.5%2c0%2c0%2c0%2c1%2c0V15.57A.5.5%2c0%2c0%2c0%2c95.5%2c15.07Z'/%3e%3cpath d='M95.5%2c44.08a.5.5%2c0%2c0%2c0-.5.5v2a.5.5%2c0%2c0%2c0%2c1%2c0v-2A.5.5%2c0%2c0%2c0%2c95.5%2c44.08Z'/%3e%3cpath d='M95.5%2c67.3a.5.5%2c0%2c0%2c0-.5.5v2a.5.5%2c0%2c0%2c0%2c1%2c0v-2A.5.5%2c0%2c0%2c0%2c95.5%2c67.3Z'/%3e%3cpath d='M95.5%2c78.9a.5.5%2c0%2c0%2c0-.5.5v2a.5.5%2c0%2c1%2c0%2c1%2c0v-2A.5.5%2c0%2c0%2c0%2c95.5%2c78.9Z'/%3e%3cpath d='M95.5%2c84.71a.5.5%2c0%2c0%2c0-.5.5v2a.5.5%2c0%2c0%2c0%2c1%2c0v-2A.5.5%2c0%2c0%2c0%2c95.5%2c84.71Z'/%3e%3cpath d='M95.5%2c20.87a.5.5%2c0%2c0%2c0-.5.5v2a.5.5%2c0%2c0%2c0%2c1%2c0v-2A.5.5%2c0%2c0%2c0%2c95.5%2c20.87Z'/%3e%3cpath d='M95.5%2c38.28a.5.5%2c0%2c0%2c0-.5.5v2a.5.5%2c0%2c1%2c0%2c1%2c0v-2A.5.5%2c0%2c0%2c0%2c95.5%2c38.28Z'/%3e%3cpath d='M95.5%2c55.69a.5.5%2c0%2c0%2c0-.5.5v2a.5.5%2c0%2c1%2c0%2c1%2c0v-2A.5.5%2c0%2c0%2c0%2c95.5%2c55.69Z'/%3e%3cpath d='M95.5%2c49.89a.5.5%2c0%2c0%2c0-.5.5v2a.5.5%2c0%2c0%2c0%2c1%2c0v-2A.5.5%2c0%2c0%2c0%2c95.5%2c49.89Z'/%3e%3cpath d='M95.5%2c32.48a.5.5%2c0%2c0%2c0-.5.5v2a.5.5%2c0%2c1%2c0%2c1%2c0V33A.5.5%2c0%2c0%2c0%2c95.5%2c32.48Z'/%3e%3cpath d='M95.5%2c26.67a.5.5%2c0%2c0%2c0-.5.5v2a.5.5%2c0%2c0%2c0%2c1%2c0v-2A.5.5%2c0%2c0%2c0%2c95.5%2c26.67Z'/%3e%3cpath d='M95.5%2c61.49a.5.5%2c0%2c0%2c0-.5.5v2a.5.5%2c0%2c0%2c0%2c1%2c0V62A.5.5%2c0%2c0%2c0%2c95.5%2c61.49Z'/%3e%3cpath d='M95.5%2c90a.5.5%2c0%2c0%2c0-.5.5v1A3.46%2c3.46%2c0%2c0%2c1%2c91.54%2c95h-1a.5.5%2c0%2c0%2c0%2c0%2c1h1A4.45%2c4.45%2c0%2c0%2c0%2c96%2c91.55v-1A.5.5%2c0%2c0%2c0%2c95.5%2c90Z'/%3e%3cpath d='M.5%2c41.24a.5.5%2c0%2c0%2c0%2c.5-.5v-2a.5.5%2c0%2c0%2c0-.5-.5.5.5%2c0%2c0%2c0-.5.5v2A.5.5%2c0%2c0%2c0%2c.5%2c41.24Z'/%3e%3cpath d='M.5%2c47a.5.5%2c0%2c0%2c0%2c.5-.5v-2a.5.5%2c0%2c0%2c0-1%2c0v2A.5.5%2c0%2c0%2c0%2c.5%2c47Z'/%3e%3cpath d='M.5%2c29.63a.5.5%2c0%2c0%2c0%2c.5-.5v-2a.5.5%2c0%2c0%2c0-1%2c0v2A.5.5%2c0%2c0%2c0%2c.5%2c29.63Z'/%3e%3cpath d='M.5%2c12.22a.5.5%2c0%2c0%2c0%2c.5-.5v-2a.5.5%2c0%2c0%2c0-1%2c0v2A.5.5%2c0%2c0%2c0%2c.5%2c12.22Z'/%3e%3cpath d='M.5%2c18a.5.5%2c0%2c0%2c0%2c.5-.5V15.57a.5.5%2c0%2c0%2c0-.5-.5.5.5%2c0%2c0%2c0-.5.5v1.95A.5.5%2c0%2c0%2c0%2c.5%2c18Z'/%3e%3cpath d='M.5%2c23.83a.5.5%2c0%2c0%2c0%2c.5-.5v-2a.5.5%2c0%2c0%2c0-.5-.5.5.5%2c0%2c0%2c0-.5.5v2A.5.5%2c0%2c0%2c0%2c.5%2c23.83Z'/%3e%3cpath d='M.5%2c35.43a.5.5%2c0%2c0%2c0%2c.5-.5V33a.5.5%2c0%2c0%2c0-.5-.5A.5.5%2c0%2c0%2c0%2c0%2c33v2A.5.5%2c0%2c0%2c0%2c.5%2c35.43Z'/%3e%3cpath d='M.5%2c81.86a.5.5%2c0%2c0%2c0%2c.5-.5v-2a.5.5%2c0%2c0%2c0-1%2c0v2A.5.5%2c0%2c0%2c0%2c.5%2c81.86Z'/%3e%3cpath d='M.5%2c76.05a.5.5%2c0%2c0%2c0%2c.5-.5v-2a.5.5%2c0%2c0%2c0-.5-.5.5.5%2c0%2c0%2c0-.5.5v2A.5.5%2c0%2c0%2c0%2c.5%2c76.05Z'/%3e%3cpath d='M.5%2c52.84a.5.5%2c0%2c0%2c0%2c.5-.5v-2a.5.5%2c0%2c0%2c0-.5-.5.5.5%2c0%2c0%2c0-.5.5v2A.5.5%2c0%2c0%2c0%2c.5%2c52.84Z'/%3e%3cpath d='M.5%2c87.66a.5.5%2c0%2c0%2c0%2c.5-.5v-2a.5.5%2c0%2c0%2c0-.5-.5.5.5%2c0%2c0%2c0-.5.5v2A.5.5%2c0%2c0%2c0%2c.5%2c87.66Z'/%3e%3cpath d='M.5%2c70.25a.5.5%2c0%2c0%2c0%2c.5-.5v-2a.5.5%2c0%2c0%2c0-.5-.5.5.5%2c0%2c0%2c0-.5.5v2A.5.5%2c0%2c0%2c0%2c.5%2c70.25Z'/%3e%3cpath d='M.5%2c58.65a.5.5%2c0%2c0%2c0%2c.5-.5v-2a.5.5%2c0%2c0%2c0-.5-.5.5.5%2c0%2c0%2c0-.5.5v2A.5.5%2c0%2c0%2c0%2c.5%2c58.65Z'/%3e%3cpath d='M.5%2c64.45A.5.5%2c0%2c0%2c0%2c1%2c64V62a.5.5%2c0%2c0%2c0-1%2c0v2A.5.5%2c0%2c0%2c0%2c.5%2c64.45Z'/%3e%3c/svg%3e"
-    class="kt-image-drop-zone__border-image"
-    alt="dashed border">
-    <i                                                                          class="kt-icon kt-icon-photo-o kt-icon--xl kt-image-drop-zone__icon kt-image-drop-zone__photo-icon"></i>
-    <div                                                                           class="kt-image-drop-zone__icon kt-image-drop-zone__add-icon-wrapper">
-    <i                                                                         class="kt-icon kt-icon-add-circle-f kt-icon--sm kt-image-drop-zone__add-icon">
-    </i>
-</div>
-      </div>
-
-         
-<div *ngFor="let selected of listOfFiles;let index = index" [ngStyle]="{ 'background-image': 'url(' + selected.src.changingThisBreaksApplicationSecurity + ')'}"  class="kt-image-upload-preview  image-upload-preview" (click)='showImage($event)'>
-    <div class="kt-image-upload-preview__height-enforcer"></div>
-    <button type="button" class="kt-image-upload-preview__delete-button" (click)="removeSelectedFile(index)">
-    <i class="kt-icon kt-icon-trash-f kt-icon--xs"></i>
-    </button>
-</div>
-
- </div>
-<div class="ui message messages messages--help">تعداد
-                                                                    عکس‌های انتخاب شده نباید بیشتر از ۲۰ باشد.
-</div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="field-template">
-                                                    <div class="field">
-                                                        <div class="text-field">متراژ</div>
-                                                        <div class="field-template__children">
-                                                            <div class="kt-textfield"><input type="tel" required=""
-                                                                    placeholder="" id="textfield-1nf78ca"
-                                                                    class="kt-textfield__input kt-textfield__input--empty"
-                                                                    value=""></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="field-template">
-                                                    <div class="field">
-                                                        <div class="text-field">آگهی‌دهنده</div>
-                                                        <div class="field-template__children">
-                                                            <div id="root_user_type"
-                                                                class="json-schema-form__inline-field">
-                                                                <div class="json-schema-form__radio-item kt-switch">
-                                                                    <div class="kt-switch__cell" role="radio"
-                                                                        aria-checked="false" tabindex="0"><input
-                                                                            class="kt-switch__input"
-                                                                            id="radio-radio-a98kg7" type="radio"
-                                                                            tabindex="-1" value="شخصی">
-                                                                        <div
-                                                                            class="kt-switch__button kt-switch__button--radio">
-                                                                        </div>
-                                                                        <div class="kt-switch__rippler">
-                                                                            <div class="kt-switch__ripple"></div>
-                                                                        </div>
-                                                                    </div><label class="kt-switch__label"
-                                                                        for="radio-radio-a98kg7">شخصی</label>
-                                                                </div>
-                                                                <div class="json-schema-form__radio-item kt-switch">
-                                                                    <div class="kt-switch__cell" role="radio"
-                                                                        aria-checked="false" tabindex="0"><input
-                                                                            class="kt-switch__input"
-                                                                            id="radio-radio-24h678c" type="radio"
-                                                                            tabindex="-1" value="مشاور املاک">
-                                                                        <div
-                                                                            class="kt-switch__button kt-switch__button--radio">
-                                                                        </div>
-                                                                        <div class="kt-switch__rippler">
-                                                                            <div class="kt-switch__ripple"></div>
-                                                                        </div>
-                                                                    </div><label class="kt-switch__label"
-                                                                        for="radio-radio-24h678c">مشاور املاک</label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="field-template">
-                                                    <div class="field">
-                                                        <div class="text-field">قیمت کل</div>
-                                                        <div class="field-template__children">
-                                                            <div class="kt-textfield"><input type="tel"
-                                                                    placeholder="قیمت به تومان" id="textfield-1pd6mm3"
-                                                                    class="kt-textfield__input kt-textfield__input--empty"
-                                                                    value=""></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="field-template">
-                                                    <div class="field">
-                                                        <div class="text-field">تعداد اتاق</div>
-                                                        <div class="field-template__children">
-                                                            <div aria-haspopup="true" aria-expanded="false"
-                                                                class="kt-dropdown-menu kt-new-select-drop-down"><button
-                                                                    type="button"
-                                                                    class="kt-new-select-field kt-new-select-field--normal"
-                                                                    tabindex="0"><span type="button"
-                                                                        class="kt-clear-field kt-clear-field--lg kt-clear-field--dark kt-new-select-clear"
-                                                                        role="button" tabindex="-1">
-                                                                        <div class="kt-clear-field__button"><i
-                                                                                class="kt-icon kt-icon-remove kt-icon--lg"></i>
-                                                                        </div>
-                                                                    </span>
-                                                                    <p class="kt-new-select-label">انتخاب کنید</p><i
-                                                                        class="kt-icon kt-icon-keyboard-arrow-down-o kt-icon--lg kt-new-select-arrow"></i>
-                                                                </button></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="field-template">
-                                                    <div class="field">
-                                                        <div class="text-field">سال ساخت</div>
-                                                        <div class="field-template__children">
-                                                            <div aria-haspopup="true" aria-expanded="false"
-                                                                class="kt-dropdown-menu kt-new-select-drop-down"><button
-                                                                    type="button"
-                                                                    class="kt-new-select-field kt-new-select-field--normal"
-                                                                    tabindex="0"><span type="button"
-                                                                        class="kt-clear-field kt-clear-field--lg kt-clear-field--dark kt-new-select-clear"
-                                                                        role="button" tabindex="-1">
-                                                                        <div class="kt-clear-field__button"><i
-                                                                                class="kt-icon kt-icon-remove kt-icon--lg"></i>
-                                                                        </div>
-                                                                    </span>
-                                                                    <p class="kt-new-select-label">انتخاب کنید</p><i
-                                                                        class="kt-icon kt-icon-keyboard-arrow-down-o kt-icon--lg kt-new-select-arrow"></i>
-                                                                </button></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="field-template">
-                                                    <div class="field">
-                                                        <div class="field-template__children">
-                                                            <div id="root_bizzDeed"
-                                                                class="json-schema-form__inline-field">
-                                                                <div class="kt-switch">
-                                                                    <div class="kt-switch__cell" role="checkbox"
-                                                                        aria-checked="false" tabindex="0"><input
-                                                                            class="kt-switch__input"
-                                                                            id="checkbox-checkbox-10m0nhm"
-                                                                            type="checkbox" tabindex="-1" value="">
-                                                                        <div
-                                                                            class="kt-switch__button kt-switch__button--checkbox">
-                                                                        </div>
-                                                                        <div class="kt-switch__icon"><svg
-                                                                                class="kt-switch__icon-svg">
-                                                                                <polyline
-                                                                                    transform="translate(5.974874, 2.353553) rotate(-45.000000) translate(-5.974874, -2.353553) "
-                                                                                    points="2 0.292893219 2 4.29289322 9.94974747 4.41421356"
-                                                                                    class="kt-switch__icon-check">
-                                                                                </polyline>
-                                                                                <line x1="1.03268998" y1="4"
-                                                                                    x2="11.0000728" y2="4"
-                                                                                    id="checkbox_check" stroke="#FFFFFF"
-                                                                                    stroke-width="2"
-                                                                                    stroke-linecap="round"
-                                                                                    stroke-linejoin="round"
-                                                                                    class="kt-switch__icon-line"></line>
-                                                                            </svg></div>
-                                                                        <div class="kt-switch__rippler">
-                                                                            <div class="kt-switch__ripple"></div>
-                                                                        </div>
-                                                                    </div><label class="kt-switch__label"
-                                                                        for="checkbox-checkbox-10m0nhm">سند
-                                                                        اداری</label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="field-template">
-                                                    <div class="field">
-                                                        <div class="field-template__children">
-                                                            <fieldset id="root_contact">
-                                                                <legend id="root_contact__title">اطلاعات تماس<span
-                                                                        class="required">*</span></legend>
-                                                                <div class="field-template">
-                                                                    <div class="field">
-                                                                        <div
-                                                                            class="text-field text-field--with-description">
-                                                                            شمارهٔ موبایل</div>
-                                                                        <div class="ui message messages messages--help">
-                                                                            کد تأیید به شمارهٔ موبایل شما ارسال خواهد
-                                                                            شد. تماس و چت نیز با این شماره انجام می‌شود.
-                                                                            توجه: لطفاً پس از ثبت آگهی، به پیامک‌های
-                                                                            پرداخت وجه بی‌اعتنا باشید.</div>
-                                                                        <div class="field-template__children">
-                                                                            <div class="kt-textfield"><input type="text"
-                                                                                    required="" disabled=""
-                                                                                    placeholder="شماره موبایل شما (**** *** 0911)"
-                                                                                    id="textfield-2d3l1b7"
-                                                                                    class="kt-textfield__input"
-                                                                                    value="09101478341"></div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="field-template">
-                                                                    <div class="field">
-                                                                        <div class="field-template__children">
-                                                                            <div id="root_contact_chat_enabled"
-                                                                                class="json-schema-form__inline-field">
-                                                                                <div
-                                                                                    class="kt-switch kt-switch--checked">
-                                                                                    <div class="kt-switch__cell"
-                                                                                        role="checkbox"
-                                                                                        aria-checked="true"
-                                                                                        tabindex="0"><input
-                                                                                            class="kt-switch__input"
-                                                                                            id="checkbox-checkbox-c7chl5"
-                                                                                            type="checkbox"
-                                                                                            tabindex="-1" value=""
-                                                                                            checked="">
-                                                                                        <div
-                                                                                            class="kt-switch__button kt-switch__button--checkbox">
-                                                                                        </div>
-                                                                                        <div class="kt-switch__icon">
-                                                                                            <svg
-                                                                                                class="kt-switch__icon-svg">
-                                                                                                <polyline
-                                                                                                    transform="translate(5.974874, 2.353553) rotate(-45.000000) translate(-5.974874, -2.353553) "
-                                                                                                    points="2 0.292893219 2 4.29289322 9.94974747 4.41421356"
-                                                                                                    class="kt-switch__icon-check">
-                                                                                                </polyline>
-                                                                                                <line x1="1.03268998"
-                                                                                                    y1="4"
-                                                                                                    x2="11.0000728"
-                                                                                                    y2="4"
-                                                                                                    id="checkbox_check"
-                                                                                                    stroke="#FFFFFF"
-                                                                                                    stroke-width="2"
-                                                                                                    stroke-linecap="round"
-                                                                                                    stroke-linejoin="round"
-                                                                                                    class="kt-switch__icon-line">
-                                                                                                </line>
-                                                                                            </svg></div>
-                                                                                        <div class="kt-switch__rippler">
-                                                                                            <div
-                                                                                                class="kt-switch__ripple">
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div><label
-                                                                                        class="kt-switch__label"
-                                                                                        for="checkbox-checkbox-c7chl5">چت
-                                                                                        دیوار فعال شود</label>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </fieldset>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="field-template">
-                                                    <div class="field">
-                                                        <div class="text-field text-field--with-description">عنوان آگهی
-                                                        </div>
-                                                        <div class="ui message messages messages--help">در عنوان آگهی به
-                                                            موارد مهمی مانند نوع ملک، متراژ و محله اشاره کنید.</div>
-                                                        <div class="field-template__children">
-                                                            <div class="kt-textfield"><input type="text" required=""
-                                                                    placeholder="مثال: زمین کشاورزی، ۰ متر، ولیعصر"
-                                                                    id="textfield-mf5gaj"
-                                                                    class="kt-textfield__input kt-textfield__input--empty"
-                                                                    value=""></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="field-template">
-                                                    <div class="field">
-                                                        <div class="text-field text-field--with-description">توضیحات
-                                                            آگهی</div>
-                                                        <div class="ui message messages messages--help">در توضیحات آگهی
-                                                            به مواردی مانند شرایط فروش، جزئیات و ویژگی‌های قابل توجه،
-                                                            دسترسی‌های محلی و موقعیت قرارگیری ملک اشاره کنید.</div>
-                                                        <div class="field-template__children">
-                                                            <div class="kt-textarea kt-textarea--resizable"><textarea
-                                                                    class="kt-textarea__field" type="text" required=""
-                                                                    placeholder="توضیحات را بنویسید."
-                                                                    name="text"></textarea>
-                                                                <div class="kt-textarea__resize-box">
-                                                                    <div class="kt-textarea__resize-indicator"></div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </fieldset>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="kt-button-row--padded kt-button-row kt-button-row--responsive"><button
-                                        class="kt-button kt-button--outlined submit-post__cancel" type="button"
-                                        tabindex="0"><span
-                                            class="kt-text-truncate no-pointer-event">انصراف</span></button><button
-                                        class="kt-button kt-button--primary" type="submit" tabindex="0"><span
-                                            class="kt-text-truncate no-pointer-event">ارسال آگهی</span></button></div>
-                            </form>
-                        </div>
-                        <div class="dim__overlay dim__overlay--animated">
-                            <div class="dim__overlay-content"><span
-                                    class="kt-progress-circular kt-progress-circular--animated kt-progress-circular--xxl"><svg
-                                        class="kt-progress-circular__content" xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 16 16">
-                                        <path class="kt-progress-circular__static-particle"
-                                            d="M8,16a8,8,0,1,1,8-8A8,8,0,0,1,8,16ZM8,2a6,6,0,1,0,6,6A6,6,0,0,0,8,2Z">
-                                        </path>
-                                        <circle class="kt-progress-circular__moving-particle" cx="8" cy="8" r="7">
-                                        </circle>
-                                    </svg></span></div>
-                        </div>
-                        <div class="dim__overlay dim__overlay--animated"></div>
-                    </div>
-                </div>
-            </div>
-            <footer class="footer"><a class="footer__divar-logo footer__link" href="/s/mashhad"><i
-                        class="kt-icon kt-icon-social-divar kt-icon--xl"></i></a>
-                <div class="footer__links"><a class="footer__link" href="/about"> دربارهٔ دیوار </a>
-                    <hr class="kt-divider footer__divider kt-divider--padded kt-divider--vertical"><a
-                        href="https://help.divar.ir" target="_blank" rel="noopener noreferrer"
-                        class="footer__link">پشتیبانی و قوانین</a>
-                    <hr class="kt-divider footer__divider kt-divider--padded kt-divider--vertical"><a
-                        href="https://divar.ir/blog" target="_blank" rel="noopener noreferrer" class="footer__link">بلاگ
-                        دیوار</a>
-                </div>
-                <div class="footer__social-links"><a href="https://twitter.com/divar_official" target="_blank"
-                        rel="noopener noreferrer" class="footer__link footer__social-link" title="دیوار در توییتر"
-                        aria-label="دیوار در توییتر"><i class="kt-icon kt-icon-social-twitter"></i></a><a
-                        href="https://www.instagram.com/divar.official" target="_blank" rel="noopener noreferrer"
-                        class="footer__link footer__social-link" title="دیوار در اینستاگرام"
-                        aria-label="دیوار در اینستاگرام"><i class="kt-icon kt-icon-social-instagram-fill"></i></a><a
-                        href="https://www.linkedin.com/company/divarofficial" target="_blank" rel="noopener noreferrer"
-                        class="footer__link footer__social-link" title="دیوار در لینکداین"
-                        aria-label="دیوار در لینکداین"><i class="kt-icon kt-icon-social-linkedin"></i></a><a
-                        href="https://www.aparat.com/divar.official" target="_blank" rel="noopener noreferrer"
-                        class="footer__link footer__social-link" title="دیوار در آپارات" aria-label="دیوار در آپارات"><i
-                            class="kt-icon kt-icon-social-aparat"></i></a></div>
-            </footer>
+  <div class="kt-row">
+    <div class="submit-post__grid kt-col-md-12 kt-col-lg-6 kt-offset-lg-3">
+      <div>
+        <h1 class="submit-post__title"> ثبت آگهی </h1>
+        <div class="form-category-title form-category-title--with-action"
+          data-gtm-vis-first-on-screen-7331304_61="121019" data-gtm-vis-recent-on-screen-7331304_61="162495"
+          data-gtm-vis-total-visible-time-7331304_61="100" data-gtm-vis-has-fired-7331304_61="1">
+          <div class="form-category-title__name">{{category.title}}</div><button
+            class="kt-button kt-button--primary kt-button--inlined form-category-title__button" type="button"
+            tabindex="0"><span class="kt-text-truncate no-pointer-event">تغییر
+              دسته‌بندی</span></button>
         </div>
+        <div class="submit-post__form-wrapper">
+          <div class="json-schema-form-dim dim">
+            <div class="json-schema-form">
+              <form class="json-schema-form__form" novalidate="">
+                <div class="field-template">
+                  <div class="field">
+                    <div class="field-template__children">
+                      <fieldset id="root">
+                        <legend id="root__title">صنعتی، کشاورزی و تجاری</legend>
+                        <div class="field-template">
+                          <div class="field">
+                            <div class="field-template__children">
+                              <div class="submit-location-selector">
+                                <div class="text-field">شهر</div>
+                                <div aria-haspopup="true" aria-expanded="false"
+                                  class="kt-dropdown-menu kt-new-select-drop-down">
+                                  <button type="button" class="kt-new-select-field kt-new-select-field--normal"
+                                    tabindex="0"><span type="button"
+                                      class="kt-clear-field kt-clear-field--lg kt-clear-field--dark kt-new-select-clear"
+                                      role="button" tabindex="-1">
+                                      <div class="kt-clear-field__button"><i
+                                          class="kt-icon kt-icon-remove kt-icon--lg"></i>
+                                      </div>
+                                    </span>
+                                    <p class="kt-new-select-label kt-new-select-label--has-label">
+                                      شیراز</p><i
+                                      class="kt-icon kt-icon-keyboard-arrow-down-o kt-icon--lg kt-new-select-arrow"></i>
+                                  </button></div>
+                                <div class="field-template">
+                                  <div class="text-field">محدودهٔ آگهی</div>
+                                  <div aria-haspopup="true" aria-expanded="false"
+                                    class="kt-dropdown-menu kt-new-select-drop-down">
+                                    <button type="button" class="kt-new-select-field kt-new-select-field--normal"
+                                      tabindex="0"><span type="button"
+                                        class="kt-clear-field kt-clear-field--lg kt-clear-field--dark kt-new-select-clear"
+                                        role="button" tabindex="-1">
+                                        <div class="kt-clear-field__button"><i
+                                            class="kt-icon kt-icon-remove kt-icon--lg"></i>
+                                        </div>
+                                      </span>
+                                      <p class="kt-new-select-label">انتخاب
+                                        محله...</p><i
+                                        class="kt-icon kt-icon-keyboard-arrow-down-o kt-icon--lg kt-new-select-arrow"></i>
+                                    </button></div>
+                                </div>
+                                <div #map style="width:100%;height:400px"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="field-template">
+                          <div class="field">
+                            <div class="field-template__children">
+                              <div class="image-uploader">
+                                <div class="text-field text-field--with-description">عکس
+                                  آگهی</div>
+                                <div class="ui message messages messages--help">عکس‌هایی
+                                  از فضای داخل و بیرون ملک اضافه کنید. آگهی‌های دارای
+                                  عکس تا «۳ برابر» بیشتر توسط کاربران دیده می‌شوند.
+                                </div>
+                                <div class="image-uploader__zone">
+                                  <div class="kt-image-drop-zone" (click)="fileInput.click()" tabindex="0"
+                                    role="button">
+                                    <input (change)="onFileChanged($event)" #fileInput #attachments
+                                      class="kt-image-drop-zone__file-input" accept="image/jpg,image/jpeg,image/png"
+                                      multiple="true" type="file" style="display: none;" autocomplete="off"
+                                      tabindex="-1">
+                                    <img
+                                      src="data:image/ svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'%3e%3ctitle%3eimage-uploader-border%3c/title%3e%3cpath d='M5.5%2c0h-1A4.45%2c4.45%2c0%2c0%2c0%2c0%2c4.45v1A.5.5%2c0%2c0%2c0%2c.5%2c6%2c.5.5%2c0%2c0%2c0%2c1%2c5.5v-1A3.46%2c3.46%2c0%2c0%2c1%2c4.46%2c1h1A.5.5%2c0%2c0%2c0%2c6%2c.5.5.5%2c0%2c0%2c0%2c5.5%2c0Z'/%3e%3cpath d='M63.25%2c0h-2a.5.5%2c0%2c0%2c0-.5.5.5.5%2c0%2c0%2c0%2c.5.5h2a.5.5%2c0%2c0%2c0%2c0-1Z'/%3e%3cpath d='M57.44%2c0H55.49a.5.5%2c0%2c0%2c0-.5.5.5.5%2c0%2c0%2c0%2c.5.5h1.95a.5.5%2c0%2c0%2c0%2c.5-.5A.5.5%2c0%2c0%2c0%2c57.44%2c0Z'/%3e%3cpath d='M51.64%2c0h-2a.5.5%2c0%2c0%2c0%2c0%2c1h2a.5.5%2c0%2c0%2c0%2c.5-.5A.5.5%2c0%2c0%2c0%2c51.64%2c0Z'/%3e%3cpath d='M86.46%2c0h-2a.5.5%2c0%2c0%2c0%2c0%2c1h2a.5.5%2c0%2c0%2c0%2c0-1Z'/%3e%3cpath d='M74.85%2c0H72.9a.5.5%2c0%2c0%2c0-.5.5.5.5%2c0%2c0%2c0%2c.5.5h1.95a.5.5%2c0%2c0%2c0%2c.5-.5A.5.5%2c0%2c0%2c0%2c74.85%2c0Z'/%3e%3cpath d='M80.65%2c0h-2a.5.5%2c0%2c0%2c0-.5.5.5.5%2c0%2c0%2c0%2c.5.5h2a.5.5%2c0%2c0%2c0%2c.5-.5A.5.5%2c0%2c0%2c0%2c80.65%2c0Z'/%3e%3cpath d='M28.43%2c0h-2a.5.5%2c0%2c0%2c0-.5.5.5.5%2c0%2c0%2c0%2c.5.5h2a.5.5%2c0%2c0%2c0%2c0-1Z'/%3e%3cpath d='M22.62%2c0H20.67a.5.5%2c0%2c0%2c0-.5.5.5.5%2c0%2c0%2c0%2c.5.5h1.95a.5.5%2c0%2c0%2c0%2c.5-.5A.5.5%2c0%2c0%2c0%2c22.62%2c0Z'/%3e%3cpath d='M16.82%2c0h-2a.5.5%2c0%2c0%2c0%2c0%2c1h2a.5.5%2c0%2c0%2c0%2c.5-.5A.5.5%2c0%2c0%2c0%2c16.82%2c0Z'/%3e%3cpath d='M11%2c0h-2a.5.5%2c0%2c0%2c0%2c0%2c1h2a.5.5%2c0%2c0%2c0%2c0-1Z'/%3e%3cpath d='M40%2c0h-2a.5.5%2c0%2c0%2c0-.5.5.5.5%2c0%2c0%2c0%2c.5.5h2a.5.5%2c0%2c0%2c0%2c.5-.5A.5.5%2c0%2c0%2c0%2c40%2c0Z'/%3e%3cpath d='M45.84%2c0h-2a.5.5%2c0%2c0%2c0-.5.5.5.5%2c0%2c0%2c0%2c.5.5h2a.5.5%2c0%2c0%2c0%2c0-1Z'/%3e%3cpath d='M34.23%2c0h-2a.5.5%2c0%2c0%2c0%2c0%2c1h2a.5.5%2c0%2c0%2c0%2c.5-.5A.5.5%2c0%2c0%2c0%2c34.23%2c0Z'/%3e%3cpath d='M69.05%2c0h-2a.5.5%2c0%2c0%2c0%2c0%2c1h2a.5.5%2c0%2c0%2c0%2c0-1Z'/%3e%3cpath d='M5.5%2c95h-1A3.46%2c3.46%2c0%2c0%2c1%2c1%2c91.54v-1A.5.5%2c0%2c0%2c0%2c.5%2c90a.5.5%2c0%2c0%2c0-.5.5v1A4.45%2c4.45%2c0%2c0%2c0%2c4.45%2c96h1a.5.5%2c0%2c0%2c0%2c0-1Z'/%3e%3cpath d='M34.23%2c95h-2a.5.5%2c0%2c0%2c0%2c0%2c1h2a.5.5%2c0%2c0%2c0%2c0-1Z'/%3e%3cpath d='M69.05%2c95h-2a.5.5%2c0%2c0%2c0%2c0%2c1h2a.5.5%2c0%2c1%2c0%2c0-1Z'/%3e%3cpath d='M28.43%2c95h-2a.5.5%2c0%2c0%2c0%2c0%2c1h2a.5.5%2c0%2c1%2c0%2c0-1Z'/%3e%3cpath d='M63.25%2c95h-2a.5.5%2c0%2c1%2c0%2c0%2c1h2a.5.5%2c0%2c0%2c0%2c0-1Z'/%3e%3cpath d='M45.84%2c95h-2a.5.5%2c0%2c1%2c0%2c0%2c1h2a.5.5%2c0%2c0%2c0%2c0-1Z'/%3e%3cpath d='M57.44%2c95H55.49a.5.5%2c0%2c0%2c0%2c0%2c1h1.95a.5.5%2c0%2c0%2c0%2c0-1Z'/%3e%3cpath d='M40%2c95h-2a.5.5%2c0%2c1%2c0%2c0%2c1h2a.5.5%2c0%2c0%2c0%2c0-1Z'/%3e%3cpath d='M51.64%2c95h-2a.5.5%2c0%2c0%2c0%2c0%2c1h2a.5.5%2c0%2c0%2c0%2c0-1Z'/%3e%3cpath d='M22.62%2c95H20.67a.5.5%2c0%2c0%2c0%2c0%2c1h1.95a.5.5%2c0%2c1%2c0%2c0-1Z'/%3e%3cpath d='M80.65%2c95h-2a.5.5%2c0%2c1%2c0%2c0%2c1h2a.5.5%2c0%2c0%2c0%2c0-1Z'/%3e%3cpath d='M86.46%2c95h-2a.5.5%2c0%2c0%2c0%2c0%2c1h2a.5.5%2c0%2c0%2c0%2c0-1Z'/%3e%3cpath d='M11%2c95h-2a.5.5%2c0%2c0%2c0%2c0%2c1h2a.5.5%2c0%2c0%2c0%2c0-1Z'/%3e%3cpath d='M16.82%2c95h-2a.5.5%2c0%2c0%2c0%2c0%2c1h2a.5.5%2c0%2c0%2c0%2c0-1Z'/%3e%3cpath d='M74.85%2c95H72.9a.5.5%2c0%2c0%2c0%2c0%2c1h1.95a.5.5%2c0%2c0%2c0%2c0-1Z'/%3e%3cpath d='M96%2c4.45A4.45%2c4.45%2c0%2c0%2c0%2c91.55%2c0h-1a.5.5%2c0%2c0%2c0-.5.5.5.5%2c0%2c0%2c0%2c.5.5h1A3.46%2c3.46%2c0%2c0%2c1%2c95%2c4.46v1a.5.5%2c0%2c0%2c0%2c1%2c0Z'/%3e%3cpath d='M95.5%2c73.1a.5.5%2c0%2c0%2c0-.5.5v2a.5.5%2c0%2c1%2c0%2c1%2c0v-2A.5.5%2c0%2c0%2c0%2c95.5%2c73.1Z'/%3e%3cpath d='M95.5%2c9.26a.5.5%2c0%2c0%2c0-.5.5v2a.5.5%2c0%2c0%2c0%2c1%2c0v-2A.5.5%2c0%2c0%2c0%2c95.5%2c9.26Z'/%3e%3cpath d='M95.5%2c15.07a.5.5%2c0%2c0%2c0-.5.5v1.95a.5.5%2c0%2c0%2c0%2c1%2c0V15.57A.5.5%2c0%2c0%2c0%2c95.5%2c15.07Z'/%3e%3cpath d='M95.5%2c44.08a.5.5%2c0%2c0%2c0-.5.5v2a.5.5%2c0%2c0%2c0%2c1%2c0v-2A.5.5%2c0%2c0%2c0%2c95.5%2c44.08Z'/%3e%3cpath d='M95.5%2c67.3a.5.5%2c0%2c0%2c0-.5.5v2a.5.5%2c0%2c0%2c0%2c1%2c0v-2A.5.5%2c0%2c0%2c0%2c95.5%2c67.3Z'/%3e%3cpath d='M95.5%2c78.9a.5.5%2c0%2c0%2c0-.5.5v2a.5.5%2c0%2c1%2c0%2c1%2c0v-2A.5.5%2c0%2c0%2c0%2c95.5%2c78.9Z'/%3e%3cpath d='M95.5%2c84.71a.5.5%2c0%2c0%2c0-.5.5v2a.5.5%2c0%2c0%2c0%2c1%2c0v-2A.5.5%2c0%2c0%2c0%2c95.5%2c84.71Z'/%3e%3cpath d='M95.5%2c20.87a.5.5%2c0%2c0%2c0-.5.5v2a.5.5%2c0%2c0%2c0%2c1%2c0v-2A.5.5%2c0%2c0%2c0%2c95.5%2c20.87Z'/%3e%3cpath d='M95.5%2c38.28a.5.5%2c0%2c0%2c0-.5.5v2a.5.5%2c0%2c1%2c0%2c1%2c0v-2A.5.5%2c0%2c0%2c0%2c95.5%2c38.28Z'/%3e%3cpath d='M95.5%2c55.69a.5.5%2c0%2c0%2c0-.5.5v2a.5.5%2c0%2c1%2c0%2c1%2c0v-2A.5.5%2c0%2c0%2c0%2c95.5%2c55.69Z'/%3e%3cpath d='M95.5%2c49.89a.5.5%2c0%2c0%2c0-.5.5v2a.5.5%2c0%2c0%2c0%2c1%2c0v-2A.5.5%2c0%2c0%2c0%2c95.5%2c49.89Z'/%3e%3cpath d='M95.5%2c32.48a.5.5%2c0%2c0%2c0-.5.5v2a.5.5%2c0%2c1%2c0%2c1%2c0V33A.5.5%2c0%2c0%2c0%2c95.5%2c32.48Z'/%3e%3cpath d='M95.5%2c26.67a.5.5%2c0%2c0%2c0-.5.5v2a.5.5%2c0%2c0%2c0%2c1%2c0v-2A.5.5%2c0%2c0%2c0%2c95.5%2c26.67Z'/%3e%3cpath d='M95.5%2c61.49a.5.5%2c0%2c0%2c0-.5.5v2a.5.5%2c0%2c0%2c0%2c1%2c0V62A.5.5%2c0%2c0%2c0%2c95.5%2c61.49Z'/%3e%3cpath d='M95.5%2c90a.5.5%2c0%2c0%2c0-.5.5v1A3.46%2c3.46%2c0%2c0%2c1%2c91.54%2c95h-1a.5.5%2c0%2c0%2c0%2c0%2c1h1A4.45%2c4.45%2c0%2c0%2c0%2c96%2c91.55v-1A.5.5%2c0%2c0%2c0%2c95.5%2c90Z'/%3e%3cpath d='M.5%2c41.24a.5.5%2c0%2c0%2c0%2c.5-.5v-2a.5.5%2c0%2c0%2c0-.5-.5.5.5%2c0%2c0%2c0-.5.5v2A.5.5%2c0%2c0%2c0%2c.5%2c41.24Z'/%3e%3cpath d='M.5%2c47a.5.5%2c0%2c0%2c0%2c.5-.5v-2a.5.5%2c0%2c0%2c0-1%2c0v2A.5.5%2c0%2c0%2c0%2c.5%2c47Z'/%3e%3cpath d='M.5%2c29.63a.5.5%2c0%2c0%2c0%2c.5-.5v-2a.5.5%2c0%2c0%2c0-1%2c0v2A.5.5%2c0%2c0%2c0%2c.5%2c29.63Z'/%3e%3cpath d='M.5%2c12.22a.5.5%2c0%2c0%2c0%2c.5-.5v-2a.5.5%2c0%2c0%2c0-1%2c0v2A.5.5%2c0%2c0%2c0%2c.5%2c12.22Z'/%3e%3cpath d='M.5%2c18a.5.5%2c0%2c0%2c0%2c.5-.5V15.57a.5.5%2c0%2c0%2c0-.5-.5.5.5%2c0%2c0%2c0-.5.5v1.95A.5.5%2c0%2c0%2c0%2c.5%2c18Z'/%3e%3cpath d='M.5%2c23.83a.5.5%2c0%2c0%2c0%2c.5-.5v-2a.5.5%2c0%2c0%2c0-.5-.5.5.5%2c0%2c0%2c0-.5.5v2A.5.5%2c0%2c0%2c0%2c.5%2c23.83Z'/%3e%3cpath d='M.5%2c35.43a.5.5%2c0%2c0%2c0%2c.5-.5V33a.5.5%2c0%2c0%2c0-.5-.5A.5.5%2c0%2c0%2c0%2c0%2c33v2A.5.5%2c0%2c0%2c0%2c.5%2c35.43Z'/%3e%3cpath d='M.5%2c81.86a.5.5%2c0%2c0%2c0%2c.5-.5v-2a.5.5%2c0%2c0%2c0-1%2c0v2A.5.5%2c0%2c0%2c0%2c.5%2c81.86Z'/%3e%3cpath d='M.5%2c76.05a.5.5%2c0%2c0%2c0%2c.5-.5v-2a.5.5%2c0%2c0%2c0-.5-.5.5.5%2c0%2c0%2c0-.5.5v2A.5.5%2c0%2c0%2c0%2c.5%2c76.05Z'/%3e%3cpath d='M.5%2c52.84a.5.5%2c0%2c0%2c0%2c.5-.5v-2a.5.5%2c0%2c0%2c0-.5-.5.5.5%2c0%2c0%2c0-.5.5v2A.5.5%2c0%2c0%2c0%2c.5%2c52.84Z'/%3e%3cpath d='M.5%2c87.66a.5.5%2c0%2c0%2c0%2c.5-.5v-2a.5.5%2c0%2c0%2c0-.5-.5.5.5%2c0%2c0%2c0-.5.5v2A.5.5%2c0%2c0%2c0%2c.5%2c87.66Z'/%3e%3cpath d='M.5%2c70.25a.5.5%2c0%2c0%2c0%2c.5-.5v-2a.5.5%2c0%2c0%2c0-.5-.5.5.5%2c0%2c0%2c0-.5.5v2A.5.5%2c0%2c0%2c0%2c.5%2c70.25Z'/%3e%3cpath d='M.5%2c58.65a.5.5%2c0%2c0%2c0%2c.5-.5v-2a.5.5%2c0%2c0%2c0-.5-.5.5.5%2c0%2c0%2c0-.5.5v2A.5.5%2c0%2c0%2c0%2c.5%2c58.65Z'/%3e%3cpath d='M.5%2c64.45A.5.5%2c0%2c0%2c0%2c1%2c64V62a.5.5%2c0%2c0%2c0-1%2c0v2A.5.5%2c0%2c0%2c0%2c.5%2c64.45Z'/%3e%3c/svg%3e"
+                                      class="kt-image-drop-zone__border-image" alt="dashed border">
+                                    <i
+                                      class="kt-icon kt-icon-photo-o kt-icon--xl kt-image-drop-zone__icon kt-image-drop-zone__photo-icon"></i>
+                                    <div class="kt-image-drop-zone__icon kt-image-drop-zone__add-icon-wrapper">
+                                      <i class="kt-icon kt-icon-add-circle-f kt-icon--sm kt-image-drop-zone__add-icon">
+                                      </i>
+                                    </div>
+                                  </div>
+
+
+                                  <div *ngFor="let selected of listOfFiles;let index = index"
+                                    [ngStyle]="{ 'background-image': 'url(' + selected.src.changingThisBreaksApplicationSecurity + ')'}"
+                                    class="kt-image-upload-preview  image-upload-preview" (click)='showImage($event)'>
+                                    <div class="kt-image-upload-preview__height-enforcer"></div>
+                                    <button type="button" class="kt-image-upload-preview__delete-button"
+                                      (click)="removeSelectedFile(index)">
+                                      <i class="kt-icon kt-icon-trash-f kt-icon--xs"></i>
+                                    </button>
+                                  </div>
+
+                                </div>
+                                <div class="ui message messages messages--help">تعداد
+                                  عکس‌های انتخاب شده نباید بیشتر از ۲۰ باشد.
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="field-template">
+                          <div class="field">
+                            <div class="text-field">متراژ</div>
+                            <div class="field-template__children">
+                              <div class="kt-textfield"><input type="tel" required="" placeholder=""
+                                  id="textfield-1nf78ca" class="kt-textfield__input kt-textfield__input--empty"
+                                  value=""></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="field-template">
+                          <div class="field">
+                            <div class="text-field">آگهی‌دهنده</div>
+                            <div class="field-template__children">
+                              <div id="root_user_type" class="json-schema-form__inline-field">
+                                <div class="json-schema-form__radio-item kt-switch">
+                                  <div class="kt-switch__cell" role="radio" aria-checked="false" tabindex="0"><input
+                                      class="kt-switch__input" id="radio-radio-a98kg7" type="radio" tabindex="-1"
+                                      value="شخصی">
+                                    <div class="kt-switch__button kt-switch__button--radio">
+                                    </div>
+                                    <div class="kt-switch__rippler">
+                                      <div class="kt-switch__ripple"></div>
+                                    </div>
+                                  </div><label class="kt-switch__label" for="radio-radio-a98kg7">شخصی</label>
+                                </div>
+                                <div class="json-schema-form__radio-item kt-switch">
+                                  <div class="kt-switch__cell" role="radio" aria-checked="false" tabindex="0"><input
+                                      class="kt-switch__input" id="radio-radio-24h678c" type="radio" tabindex="-1"
+                                      value="مشاور املاک">
+                                    <div class="kt-switch__button kt-switch__button--radio">
+                                    </div>
+                                    <div class="kt-switch__rippler">
+                                      <div class="kt-switch__ripple"></div>
+                                    </div>
+                                  </div><label class="kt-switch__label" for="radio-radio-24h678c">مشاور املاک</label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="field-template">
+                          <div class="field">
+                            <div class="text-field">قیمت کل</div>
+                            <div class="field-template__children">
+                              <div class="kt-textfield"><input type="tel" placeholder="قیمت به تومان"
+                                  id="textfield-1pd6mm3" class="kt-textfield__input kt-textfield__input--empty"
+                                  value=""></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="field-template">
+                          <div class="field">
+                            <div class="text-field">تعداد اتاق</div>
+                            <div class="field-template__children">
+                              <div aria-haspopup="true" aria-expanded="false"
+                                class="kt-dropdown-menu kt-new-select-drop-down"><button type="button"
+                                  class="kt-new-select-field kt-new-select-field--normal" tabindex="0"><span
+                                    type="button"
+                                    class="kt-clear-field kt-clear-field--lg kt-clear-field--dark kt-new-select-clear"
+                                    role="button" tabindex="-1">
+                                    <div class="kt-clear-field__button"><i
+                                        class="kt-icon kt-icon-remove kt-icon--lg"></i>
+                                    </div>
+                                  </span>
+                                  <p class="kt-new-select-label">انتخاب کنید</p><i
+                                    class="kt-icon kt-icon-keyboard-arrow-down-o kt-icon--lg kt-new-select-arrow"></i>
+                                </button></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="field-template">
+                          <div class="field">
+                            <div class="text-field">سال ساخت</div>
+                            <div class="field-template__children">
+                              <div aria-haspopup="true" aria-expanded="false"
+                                class="kt-dropdown-menu kt-new-select-drop-down"><button type="button"
+                                  class="kt-new-select-field kt-new-select-field--normal" tabindex="0"><span
+                                    type="button"
+                                    class="kt-clear-field kt-clear-field--lg kt-clear-field--dark kt-new-select-clear"
+                                    role="button" tabindex="-1">
+                                    <div class="kt-clear-field__button"><i
+                                        class="kt-icon kt-icon-remove kt-icon--lg"></i>
+                                    </div>
+                                  </span>
+                                  <p class="kt-new-select-label">انتخاب کنید</p><i
+                                    class="kt-icon kt-icon-keyboard-arrow-down-o kt-icon--lg kt-new-select-arrow"></i>
+                                </button></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="field-template">
+                          <div class="field">
+                            <div class="field-template__children">
+                              <div id="root_bizzDeed" class="json-schema-form__inline-field">
+                                <div class="kt-switch">
+                                  <div class="kt-switch__cell" role="checkbox" aria-checked="false" tabindex="0"><input
+                                      class="kt-switch__input" id="checkbox-checkbox-10m0nhm" type="checkbox"
+                                      tabindex="-1" value="">
+                                    <div class="kt-switch__button kt-switch__button--checkbox">
+                                    </div>
+                                    <div class="kt-switch__icon"><svg class="kt-switch__icon-svg">
+                                        <polyline
+                                          transform="translate(5.974874, 2.353553) rotate(-45.000000) translate(-5.974874, -2.353553) "
+                                          points="2 0.292893219 2 4.29289322 9.94974747 4.41421356"
+                                          class="kt-switch__icon-check">
+                                        </polyline>
+                                        <line x1="1.03268998" y1="4" x2="11.0000728" y2="4" id="checkbox_check"
+                                          stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"
+                                          stroke-linejoin="round" class="kt-switch__icon-line"></line>
+                                      </svg></div>
+                                    <div class="kt-switch__rippler">
+                                      <div class="kt-switch__ripple"></div>
+                                    </div>
+                                  </div><label class="kt-switch__label" for="checkbox-checkbox-10m0nhm">سند
+                                    اداری</label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="field-template">
+                          <div class="field">
+                            <div class="field-template__children">
+                              <fieldset id="root_contact">
+                                <legend id="root_contact__title">اطلاعات تماس<span class="required">*</span></legend>
+                                <div class="field-template">
+                                  <div class="field">
+                                    <div class="text-field text-field--with-description">
+                                      شمارهٔ موبایل</div>
+                                    <div class="ui message messages messages--help">
+                                      کد تأیید به شمارهٔ موبایل شما ارسال خواهد
+                                      شد. تماس و چت نیز با این شماره انجام می‌شود.
+                                      توجه: لطفاً پس از ثبت آگهی، به پیامک‌های
+                                      پرداخت وجه بی‌اعتنا باشید.</div>
+                                    <div class="field-template__children">
+                                      <div class="kt-textfield"><input type="text" required="" disabled=""
+                                          placeholder="شماره موبایل شما (**** *** 0911)" id="textfield-2d3l1b7"
+                                          class="kt-textfield__input" value="09101478341"></div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="field-template">
+                                  <div class="field">
+                                    <div class="field-template__children">
+                                      <div id="root_contact_chat_enabled" class="json-schema-form__inline-field">
+                                        <div class="kt-switch kt-switch--checked">
+                                          <div class="kt-switch__cell" role="checkbox" aria-checked="true" tabindex="0">
+                                            <input class="kt-switch__input" id="checkbox-checkbox-c7chl5"
+                                              type="checkbox" tabindex="-1" value="" checked="">
+                                            <div class="kt-switch__button kt-switch__button--checkbox">
+                                            </div>
+                                            <div class="kt-switch__icon">
+                                              <svg class="kt-switch__icon-svg">
+                                                <polyline
+                                                  transform="translate(5.974874, 2.353553) rotate(-45.000000) translate(-5.974874, -2.353553) "
+                                                  points="2 0.292893219 2 4.29289322 9.94974747 4.41421356"
+                                                  class="kt-switch__icon-check">
+                                                </polyline>
+                                                <line x1="1.03268998" y1="4" x2="11.0000728" y2="4" id="checkbox_check"
+                                                  stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"
+                                                  stroke-linejoin="round" class="kt-switch__icon-line">
+                                                </line>
+                                              </svg></div>
+                                            <div class="kt-switch__rippler">
+                                              <div class="kt-switch__ripple">
+                                              </div>
+                                            </div>
+                                          </div><label class="kt-switch__label" for="checkbox-checkbox-c7chl5">چت
+                                            دیوار فعال شود</label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </fieldset>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="field-template">
+                          <div class="field">
+                            <div class="text-field text-field--with-description">عنوان آگهی
+                            </div>
+                            <div class="ui message messages messages--help">در عنوان آگهی به
+                              موارد مهمی مانند نوع ملک، متراژ و محله اشاره کنید.</div>
+                            <div class="field-template__children">
+                              <div class="kt-textfield"><input type="text" required=""
+                                  placeholder="مثال: زمین کشاورزی، ۰ متر، ولیعصر" id="textfield-mf5gaj"
+                                  class="kt-textfield__input kt-textfield__input--empty" value=""></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="field-template">
+                          <div class="field">
+                            <div class="text-field text-field--with-description">توضیحات
+                              آگهی</div>
+                            <div class="ui message messages messages--help">در توضیحات آگهی
+                              به مواردی مانند شرایط فروش، جزئیات و ویژگی‌های قابل توجه،
+                              دسترسی‌های محلی و موقعیت قرارگیری ملک اشاره کنید.</div>
+                            <div class="field-template__children">
+                              <div class="kt-textarea kt-textarea--resizable"><textarea class="kt-textarea__field"
+                                  type="text" required="" placeholder="توضیحات را بنویسید." name="text"></textarea>
+                                <div class="kt-textarea__resize-box">
+                                  <div class="kt-textarea__resize-indicator"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </fieldset>
+                    </div>
+                  </div>
+                </div>
+                <div class="kt-button-row--padded kt-button-row kt-button-row--responsive"><button
+                    class="kt-button kt-button--outlined submit-post__cancel" type="button" tabindex="0"><span
+                      class="kt-text-truncate no-pointer-event">انصراف</span></button><button
+                    class="kt-button kt-button--primary" type="submit" tabindex="0"><span
+                      class="kt-text-truncate no-pointer-event">ارسال آگهی</span></button></div>
+              </form>
+            </div>
+            <div class="dim__overlay dim__overlay--animated">
+              <div class="dim__overlay-content"><span
+                  class="kt-progress-circular kt-progress-circular--animated kt-progress-circular--xxl"><svg
+                    class="kt-progress-circular__content" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                    <path class="kt-progress-circular__static-particle"
+                      d="M8,16a8,8,0,1,1,8-8A8,8,0,0,1,8,16ZM8,2a6,6,0,1,0,6,6A6,6,0,0,0,8,2Z">
+                    </path>
+                    <circle class="kt-progress-circular__moving-particle" cx="8" cy="8" r="7">
+                    </circle>
+                  </svg></span></div>
+            </div>
+            <div class="dim__overlay dim__overlay--animated"></div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer"><a class="footer__divar-logo footer__link" href="/s/mashhad"><i
+            class="kt-icon kt-icon-social-divar kt-icon--xl"></i></a>
+        <div class="footer__links"><a class="footer__link" href="/about"> دربارهٔ دیوار </a>
+          <hr class="kt-divider footer__divider kt-divider--padded kt-divider--vertical"><a href="https://help.divar.ir"
+            target="_blank" rel="noopener noreferrer" class="footer__link">پشتیبانی و قوانین</a>
+          <hr class="kt-divider footer__divider kt-divider--padded kt-divider--vertical"><a href="https://divar.ir/blog"
+            target="_blank" rel="noopener noreferrer" class="footer__link">بلاگ
+            دیوار</a>
+        </div>
+        <div class="footer__social-links"><a href="https://twitter.com/divar_official" target="_blank"
+            rel="noopener noreferrer" class="footer__link footer__social-link" title="دیوار در توییتر"
+            aria-label="دیوار در توییتر"><i class="kt-icon kt-icon-social-twitter"></i></a><a
+            href="https://www.instagram.com/divar.official" target="_blank" rel="noopener noreferrer"
+            class="footer__link footer__social-link" title="دیوار در اینستاگرام" aria-label="دیوار در اینستاگرام"><i
+              class="kt-icon kt-icon-social-instagram-fill"></i></a><a
+            href="https://www.linkedin.com/company/divarofficial" target="_blank" rel="noopener noreferrer"
+            class="footer__link footer__social-link" title="دیوار در لینکداین" aria-label="دیوار در لینکداین"><i
+              class="kt-icon kt-icon-social-linkedin"></i></a><a href="https://www.aparat.com/divar.official"
+            target="_blank" rel="noopener noreferrer" class="footer__link footer__social-link" title="دیوار در آپارات"
+            aria-label="دیوار در آپارات"><i class="kt-icon kt-icon-social-aparat"></i></a></div>
+      </footer>
     </div>
+  </div>
 </div>
