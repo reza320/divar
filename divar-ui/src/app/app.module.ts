@@ -38,6 +38,7 @@ import { AuthInterceptor } from './intereptor/auth.interceptor';
 import { RegisterComponent } from './pages/login/register.component';
 import { RegisterPost } from './pages/registerPost/registerPost.component';
 import { RegisterPostCategory } from './pages/registerPost/categories/registerPostCategory.component';
+import { AgmCoreModule } from '@agm/core';
 
 declare var alertify: any;
 
@@ -141,6 +142,12 @@ export const AppConfig: ITaminApplicationConfig = {
   ],
 
   imports: [
+ AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyD0zp6Ki_8UbjvcXf7Q_SyiCzza-L3HKwA',
+          libraries: ["places"]
+    }),
+
+
     BrowserModule,
     AppRoutingModule,
     TaminFrameworkModule,

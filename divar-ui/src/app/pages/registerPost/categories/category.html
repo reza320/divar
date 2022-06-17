@@ -56,7 +56,22 @@
                                         class="kt-icon kt-icon-keyboard-arrow-down-o kt-icon--lg kt-new-select-arrow"></i>
                                     </button></div>
                                 </div>
-                                <div #map style="width:100%;height:400px"></div>
+
+  <div class="form-group">
+    <label>Enter address</label>
+    <input type="text" class="form-control" (keydown.enter)="$event.preventDefault()" placeholder="Search Nearest Location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" #search>
+  </div>
+
+  <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+  <agm-marker [latitude]="lat" [longitude]="lng" [markerDraggable]="true"
+      (dragEnd)="markerDragEnd($event)"></agm-marker>
+</agm-map>
+
+
+ <h5>Address: {{address}}</h5>
+  <div>Latitude: {{lat}}</div>
+  <div>Longitude: {{lng}}</div>
+
                               </div>
                             </div>
                           </div>

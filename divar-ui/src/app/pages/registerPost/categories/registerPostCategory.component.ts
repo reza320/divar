@@ -1,8 +1,7 @@
-import { Component, Injector, Input, ViewChild, ViewEncapsulation } from "@angular/core";
+import { Component, ElementRef, Injector, Input, NgZone, ViewChild, ViewEncapsulation } from "@angular/core";
+import { MapsAPILoader  } from '@agm/core';
 import { DomSanitizer } from "@angular/platform-browser";
-import { Urls } from "src/settings/urls";
 import { TaminPageBaseComponent } from "tamin-framework";
-import {} from 'googlemaps';
 
 @Component({
   selector: 'app-register-post-category',
@@ -15,7 +14,7 @@ export class RegisterPostCategory extends TaminPageBaseComponent{
 
 
 @ViewChild('attachments') attachment: any;
-@ViewChild('map') mapElement: any;
+@ViewChild('search') searchElementRef: ElementRef;
 
 
 @Input() category;
@@ -23,9 +22,16 @@ overlay: string;
   listOfFiles: any=[];
   fileList: any=[];
 
-  map: google.maps.Map;
+  lat :number;
+  lng : number;
+  zoom:number;
+  address: string;
+  private geoCoder;
 
-  constructor(injector: Injector,private sanitizer: DomSanitizer) {
+ 
+
+  constructor(injector: Injector,private sanitizer: DomSanitizer,private mapsAPILoader: MapsAPILoader,
+    private ngZone: NgZone) {
     super(injector);
   }
 
@@ -35,13 +41,72 @@ overlay: string;
   }
 
 
-  initializePage() {
-    const mapProperties = {
-      center: new google.maps.LatLng(35.2271, -80.8431),
-      zoom: 15,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
- };
- this.map = new google.maps.Map(this.mapElement.nativeElement,    mapProperties);
+  ngOnInit() {
+    this.mapsAPILoader.load().then(() => {
+   this.setCurrentLocation();
+   this.geoCoder = new google.maps.Geocoder;
+
+      let autocomplete = new google.maps.places.Autocomplete(this.searchElementRef.nativeElement);
+      autocomplete.addListener("place_changed", () => {
+        this.ngZone.run(() => {
+          //get the place result
+          let place: google.maps.places.PlaceResult = autocomplete.getPlace();
+
+          //verify result
+          if (place.geometry === undefined || place.geometry === null) {
+            return;
+          }
+
+          //set latitude, longitude and zoom
+          this.lat = place.geometry.location.lat();
+          this.lng = place.geometry.location.lng();
+          this.zoom = 12;
+        });
+      });
+    });
+  }
+  
+  
+
+   // Get Current Location Coordinates
+  private setCurrentLocation() {
+      if ('geolocation' in navigator) {
+        navigator.geolocation.getCurrentPosition((position) => {
+          this.lat = position.coords.latitude;
+          this.lng = position.coords.longitude;
+          this.zoom = 15;
+        });
+      }
+    }
+
+
+
+
+ markerDragEnd($event: google.maps.MouseEvent) {
+    console.log($event);
+    this.lat = $event.coords.lat;
+    this.lng = $event.coords.lng;
+    this.getAddress(this.lat, this.lng);
+  }
+
+
+
+  getAddress(latitude, longitude) {
+    this.geoCoder.geocode({ 'location': { lat: latitude, lng: longitude } }, (results, status) => {
+      console.log(results);
+      console.log(status);
+      if (status === 'OK') {
+        if (results[0]) {
+          this.zoom = 12;
+          this.address = results[0].formatted_address;
+        } else {
+          window.alert('No results found');
+        }
+      } else {
+        window.alert('Geocoder failed due to: ' + status);
+      }
+
+    });
   }
 
 
