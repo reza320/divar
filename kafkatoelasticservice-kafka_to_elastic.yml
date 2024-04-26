@@ -36,7 +36,9 @@ retry-config:
 
 elastic-config:
   index-name: twitter-index
-  connection-url: http://localhost:9200
+  connection-url: https://tamin-search-6751797221.eu-central-1.bonsaisearch.net:443
   connect-timeout-ms: 5000
   socket-timeout-ms: 30000
   is-repository: true
+  user: c7k18527yx
+  pass: 2ba3dvtsh8
