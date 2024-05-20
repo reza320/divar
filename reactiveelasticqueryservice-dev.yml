@@ -39,9 +39,9 @@ spring:
   webflux:
     base-path: /reactive-elastic-query-service
   codec:
-    max-in-memory-size: 25MB
+    max-in-memory-size: 125MB
   data:
     elasticsearch:
       client:
         reactive:
-          max-in-memory-size: 25MB
+          max-in-memory-size: 125MB
