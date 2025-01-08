@@ -35,6 +35,7 @@ retry-config:
   sleep-time-ms: 2000
 
 elastic-config:
+  is-repository: true
   index-name: twitter
   connection-url: https://nxslz9rfgm:ii34zb0h9v@kafka-6066187317.us-east-1.bonsaisearch.net:443
   connect-timeout-ms: 5000
