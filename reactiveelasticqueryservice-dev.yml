@@ -1,10 +1,10 @@
 elastic-query-service:
-  version: v1
+  backPressure-delay-ms: 500
+
 
 server:
   port: 8183
-  servlet:
-    context-path: /elastic-query-service
+
 
 elastic-query-config:
   text-field: text
@@ -22,11 +22,13 @@ user-config:
   password: 1234
   roles: USER
 
-springdoc:
-  api-docs:
-    path: /api-docs
-  swagger-ui:
-    path: /swagger-ui.html
-
-security:
-  paths-to-ignore: /api-docs
+spring:
+  webflux:
+    base-path: /reactive-elastic-query-service
+  codec:
+    max-in-memory-size: 125MB
+  data:
+    elasticsearch:
+      client:
+        reactive:
+          max-in-memory-size: 125MB
